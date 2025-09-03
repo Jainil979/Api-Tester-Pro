@@ -1,0 +1,136 @@
+.json-code {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    font-family: 'Fira Code', monospace;
+    border-radius: 0.5rem;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.header-row {
+    transition: background-color 0.2s;
+}
+
+.header-row:hover {
+    background-color: #f7fafc;
+}
+
+.tab-active {
+    border-bottom: 3px solid #4299e1;
+    color: #4299e1;
+    font-weight: 600;
+}
+
+/* Syntax highlighting for JSON responses */
+.json-code .string { color: #a3be8c; }
+.json-code .number { color: #b48ead; }
+.json-code .boolean { color: #81a1c1; }
+.json-code .null { color: #bf616a; }
+.json-code .key { color: #ebcb8b; }
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Custom scrollbar for code areas */
+.json-code::-webkit-scrollbar {
+    width: 8px;
+}
+
+.json-code::-webkit-scrollbar-track {
+    background: #2d3748;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.json-code::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 4px;
+}
+
+.json-code::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* Transition effects for UI elements */
+.transition-all {
+    transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .flex.items-center.justify-between > div:first-child {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* Body format toggle styles */
+.body-format-btn {
+    transition: all 0.2s ease;
+}
+
+.body-format-btn:hover {
+    opacity: 0.9;
+}
+
+/* JSON syntax highlighting in body textarea */
+#request-body {
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    line-height: 1.5;
+    color:black;
+}
+
+/* Scrollbar styling for textarea */
+#request-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#request-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0 4px 4px 0;
+}
+
+#request-body::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#request-body::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+
+/* Ensure placeholder is visible when textarea is empty */
+#request-body[data-empty="true"]::placeholder {
+    opacity: 1;
+    color: #718096;
+}
+
+#request-body::placeholder {
+    opacity: 1;
+    color: #718096;
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Make sure placeholder doesn't disappear when textarea is focused */
+#request-body:focus::placeholder {
+    opacity: 0.6;
+}
