@@ -1,0 +1,30 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+local_settings.py
+
+# Environment / credentials
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Others
+*.bak
+*.swp
+.DS_Store
+node_modules/
